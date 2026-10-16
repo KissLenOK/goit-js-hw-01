@@ -1,8 +1,8 @@
 function getShippingMessage(country, price, deliveryFee) {
-  const total = price + deliveryFee;
-  return `Вартість товару з доставкою в країну ${country} коштує ${total} UAH`;
+  const totalPrice = price + deliveryFee;
+  return `Shipping to ${country} will cost ${totalPrice} credits`;
 }
 
-console.log(getShippingMessage('Україна', 786, 50));
-console.log(getShippingMessage('Германія', 999, 570));
-console.log(getShippingMessage('Австрія', 15, 1200));
+console.log(getShippingMessage('Australia', 120, 50)); // "Shipping to Australia will cost 170 credits"
+console.log(getShippingMessage('Germany', 80, 20)); // "Shipping to Germany will cost 100 credits"
+console.log(getShippingMessage('Sweden', 100, 20)); // "Shipping to Sweden will cost 120 credits"
